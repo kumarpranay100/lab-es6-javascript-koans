@@ -8,7 +8,6 @@ describe('`let` restricts the scope of the variable to the current block - ', ()
   describe('`let` vs. `var`.', () => {
     it('`var` works as usual, it does not restricts scope', () => {
       if (true) { 
-        /*You should add your code in here*/
         var varX = true;
       }
       expect(varX).toBe(true);
@@ -45,15 +44,13 @@ describe('`const` is like `let` plus read-only. ', () => {
   describe('scalar values are read-only', () => {
     it('number are read-only', () => {
       const constNum = 0;
-      // constNum = 1;
-
+      
       expect(constNum).toBe(0);
     });
 
     it('string are read-only', () => {
       const constString = "I am a const";
-      /*constString = "Cant change you?"; */
-
+      
       expect(constString).toBe("I am a const");
     });
 
@@ -249,7 +246,6 @@ describe('destructuring arrays makes shorter code. ', () => {
   });
 
   it('chained assignments', () => {
-    // let c, d;
     let [a, b] = [c, d] = [1, 2];
     expect([a, b, c, d]).toEqual([1, 2, 1, 2]);
   });
@@ -557,7 +553,7 @@ describe('class creation', () => {
   });
 
   it('class is block scoped', () => {
-    // class Inside {}
+    
     { class Inside {} }
     expect(typeof Inside).toBe('undefined');
   });
